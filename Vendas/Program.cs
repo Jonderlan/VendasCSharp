@@ -4,13 +4,14 @@ namespace Vendas {
     class Program {
         static void Main(string[] args) {
 
+            Cliente c = new Cliente();
             int opcao;
             do {
                 Console.Clear();
                 Console.Write("-----------Menu do exercicios-----------\n\n");
                 Console.WriteLine("1 - Cadastrar de Cliente\n" +
                                   "2 - Listar de Clientes\n" +
-                                  "3 - Cadastrar de Vendedor\n" +
+                                  "3 - Cadastrar Vendedor\n" +
                                   "4 - Listar de Vendedores\n" +
                                   "5 - Cadastrar de Produto\n" +
                                   "6 - Listar de Produtos\n" +
@@ -27,17 +28,21 @@ namespace Vendas {
                 switch (opcao) {
 
                     case 1:
-                        Console.WriteLine("\n-----------Entrou lição 01\n");
-
+                        Console.WriteLine("\n-----------CADASTRO DE CLIENTE-----------\n");
+                        Console.WriteLine("Informe o nome do cliente");
+                        c.Nome = Console.ReadLine();
+                        Console.WriteLine("Informe o CPF do cliente");
+                        c.Cpf = Console.ReadLine();
+                        Console.WriteLine($"Nome digitado: {c.Nome} e CPF digitado {c.Cpf}");
                         break;
 
                     case 2:
-                        Console.WriteLine("\n-----------Entrou lição 02\n");
+                        Console.WriteLine("\n-----------LISTAR CLIENTEL-----------\n");
 
                         break;
 
                     case 3:
-                        Console.WriteLine("-----------Entrou lição 03\n");
+                        Console.WriteLine("-----------CADASTRAR VENDEDOR-----------\n");
 
                         break;
 
