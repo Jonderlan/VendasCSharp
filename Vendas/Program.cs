@@ -33,11 +33,27 @@ namespace Vendas {
                         c.Nome = Console.ReadLine();
                         Console.WriteLine("Informe o CPF do cliente");
                         c.Cpf = Console.ReadLine();
-                        Console.WriteLine($"Nome digitado: {c.Nome} e CPF digitado {c.Cpf}");
+
+                        foreach (Cliente clienteCadastrado in clientes) {
+                            if (clienteCadastrado.Cpf==c.Cpf) {
+                                // Não permitir o cadastro
+
+                                Console.WriteLine("Não foi possível cadastrar!");
+                            } else {
+
+                                //Permitir o cadastro
+
+                                clientes.Add(c);
+                                Console.WriteLine($"Cliente salvo com sucesso");
+
+                            }
+                        }
+
+                        
                         break;
 
                     case 2:
-                        Console.WriteLine("\n-----------LISTAR CLIENTEL-----------\n");
+                        Console.WriteLine("\n-----------LISTAR CLIENTES-----------\n");
 
                         break;
 
